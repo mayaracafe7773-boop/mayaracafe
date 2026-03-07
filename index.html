@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="-QeJje7mcsJX6ombtxDGJGpOIhge1QeqCBQTVVrLq1w" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mayara Cafe | Pure Veg Cafe</title>
@@ -12,12 +11,10 @@
   <style>
     :root{
       --bg:#fff7ee;
-      --bg2:#fff;
       --text:#1f1a17;
       --muted:#6f625b;
       --brand:#c36a2d;
       --brand2:#2f8f83;
-      --card:#ffffff;
       --line:rgba(31,26,23,.10);
       --shadow:0 18px 45px rgba(31,26,23,.10);
       --radius:18px;
@@ -26,24 +23,24 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background:
         radial-gradient(1000px 520px at 10% 10%, rgba(195,106,45,.20), transparent 55%),
         radial-gradient(900px 520px at 90% 20%, rgba(47,143,131,.18), transparent 55%),
-        linear-gradient(180deg, var(--bg), #fff3e6 35%, var(--bg));
+        linear-gradient(180deg, #fff7ee, #fff3e6 35%, #fff7ee);
       min-height:100vh;
     }
 
     a{color:inherit; text-decoration:none}
     img{max-width:100%; display:block}
-    .container{max-width:1120px; margin:0 auto; padding:20px;}
+    .container{max-width:1120px; margin:0 auto; padding:20px}
 
     header{
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(255,247,238,.78);
+      background:rgba(255,247,238,.85);
       backdrop-filter:blur(10px);
       border-bottom:1px solid var(--line);
     }
@@ -61,12 +58,11 @@
       align-items:center;
       gap:10px;
       font-weight:900;
-      letter-spacing:.2px;
     }
 
     .brandLogo{
-      width:44px;
-      height:44px;
+      width:48px;
+      height:48px;
       border-radius:12px;
       border:1px solid var(--line);
       background:#fff;
@@ -86,16 +82,13 @@
       padding:10px 12px;
       border-radius:999px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.65);
+      background:rgba(255,255,255,.70);
       transition:.2s;
       font-weight:800;
       font-size:14px;
     }
 
-    .pill:hover{
-      transform:translateY(-1px);
-      border-color:rgba(195,106,45,.35);
-    }
+    .pill:hover{transform:translateY(-1px)}
 
     .cta{
       padding:10px 14px;
@@ -115,11 +108,15 @@
       align-items:stretch;
     }
 
-    .heroCard{
+    .heroCard,
+    .card{
       border:1px solid var(--line);
-      background:rgba(255,255,255,.78);
+      background:rgba(255,255,255,.82);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
+    }
+
+    .heroCard{
       padding:22px;
       overflow:hidden;
       position:relative;
@@ -173,10 +170,7 @@
       cursor:pointer;
     }
 
-    .btn:hover{
-      transform:translateY(-1px);
-      border-color:rgba(47,143,131,.35);
-    }
+    .btn:hover{transform:translateY(-1px)}
 
     .btnPrimary{
       background:linear-gradient(135deg, var(--brand), var(--brand2));
@@ -206,7 +200,7 @@
       bottom:14px;
       padding:10px 12px;
       border-radius:14px;
-      background:rgba(255,255,255,.86);
+      background:rgba(255,255,255,.88);
       border:1px solid var(--line);
       font-weight:1000;
       box-shadow:0 10px 30px rgba(31,26,23,.10);
@@ -248,10 +242,6 @@
     }
 
     .card{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.78);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
       padding:16px;
     }
 
@@ -277,8 +267,8 @@
     }
 
     .menuIcon{
-      width:48px;
-      height:48px;
+      width:52px;
+      height:52px;
       border-radius:16px;
       overflow:hidden;
       border:1px solid var(--line);
@@ -305,6 +295,7 @@
       box-shadow:var(--shadow);
       background:#fff;
       position:relative;
+      min-height:220px;
     }
 
     .g img{
@@ -320,7 +311,7 @@
       position:absolute;
       left:12px;
       bottom:12px;
-      background:rgba(255,255,255,.85);
+      background:rgba(255,255,255,.88);
       border:1px solid var(--line);
       padding:8px 10px;
       border-radius:12px;
@@ -351,7 +342,7 @@
       padding:12px 12px;
       border-radius:14px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.9);
+      background:rgba(255,255,255,.95);
       color:var(--text);
       outline:none;
     }
@@ -375,17 +366,6 @@
       font-weight:800;
     }
 
-    .skeleton{
-      background:linear-gradient(90deg, rgba(0,0,0,.04), rgba(0,0,0,.08), rgba(0,0,0,.04));
-      background-size:200% 100%;
-      animation:sk 1.3s infinite;
-    }
-
-    @keyframes sk{
-      0%{background-position:200% 0}
-      100%{background-position:-200% 0}
-    }
-
     @media (max-width: 920px){
       .hero{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr}
@@ -393,6 +373,8 @@
       .gallery{grid-template-columns:1fr}
       h1{font-size:34px}
       .heroImage img{min-height:260px}
+      .nav{flex-direction:column; align-items:flex-start}
+      .navlinks{justify-content:flex-start}
     }
   </style>
 </head>
@@ -438,7 +420,7 @@
         </div>
 
         <p class="note">
-          Call or WhatsApp us on <b>+91 917665155938</b> for orders and enquiries.
+          Call or WhatsApp us on <b>917665155938</b> for orders and enquiries.
         </p>
       </div>
 
@@ -460,17 +442,16 @@
     <section id="gallery">
       <div class="sectionTitle">
         <h2>Gallery</h2>
-        <span>Fast-loading images</span>
+        <span>Fresh photos</span>
       </div>
 
       <div class="gallery">
-        <div class="g big skeleton">
+        <div class="g big">
           <img
             src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=60"
             alt="Cafe interior"
             loading="lazy"
             decoding="async"
-            onload="this.parentElement.classList.remove('skeleton')"
           >
           <div class="gLabel">Cozy Seating</div>
         </div>
@@ -496,14 +477,8 @@
       <div class="grid">
         <div class="card">
           <div class="menuTop">
-            <div class="menuIcon skeleton">
-              <img
-                src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=160&q=60"
-                alt="Sandwich"
-                loading="lazy"
-                decoding="async"
-                onload="this.parentElement.classList.remove('skeleton')"
-              >
+            <div class="menuIcon">
+              <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=160&q=60" alt="Sandwich">
             </div>
             <div>
               <h3 style="margin:0;">🥪 Sandwiches</h3>
@@ -534,14 +509,8 @@
 
         <div class="card">
           <div class="menuTop">
-            <div class="menuIcon skeleton">
-              <img
-                src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=160&q=60"
-                alt="Burger"
-                loading="lazy"
-                decoding="async"
-                onload="this.parentElement.classList.remove('skeleton')"
-              >
+            <div class="menuIcon">
+              <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=160&q=60" alt="Burger">
             </div>
             <div>
               <h3 style="margin:0;">🍔 Burgers</h3>
@@ -557,7 +526,7 @@
         <div class="card">
           <div class="menuTop">
             <div class="menuIcon">
-              <img src="pasta.png" alt="Pasta">
+              <img src="./pasta.png" alt="Pasta">
             </div>
             <div>
               <h3 style="margin:0;">🍝 Pasta</h3>
@@ -572,14 +541,8 @@
 
         <div class="card">
           <div class="menuTop">
-            <div class="menuIcon skeleton">
-              <img
-                src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=160&q=60"
-                alt="Fries"
-                loading="lazy"
-                decoding="async"
-                onload="this.parentElement.classList.remove('skeleton')"
-              >
+            <div class="menuIcon">
+              <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=160&q=60" alt="Fries">
             </div>
             <div>
               <h3 style="margin:0;">🌮 Snacks</h3>
@@ -594,14 +557,8 @@
 
         <div class="card">
           <div class="menuTop">
-            <div class="menuIcon skeleton">
-              <img
-                src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=160&q=60"
-                alt="Cold coffee"
-                loading="lazy"
-                decoding="async"
-                onload="this.parentElement.classList.remove('skeleton')"
-              >
+            <div class="menuIcon">
+              <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=160&q=60" alt="Cold coffee">
             </div>
             <div>
               <h3 style="margin:0;">🥤 Beverages</h3>
@@ -630,6 +587,7 @@
             We focus on fresh ingredients, hygiene, and quick service.
           </p>
         </div>
+
         <div class="card">
           <h3>Why People Love Us</h3>
           <p class="sub">
@@ -654,14 +612,14 @@
           <p class="sub">
             <b>Address 1:</b> 171, Jhora Magra Complex, Goyali Choraha, Sirohi, Rajasthan - 307001<br><br>
             <b>Address 2:</b> 151, Gandhi Vadi, UmarGam, Daman Road, Gujarat - 396171<br><br>
-            <b>Phone:</b> +91 917665155938<br>
+            <b>Phone:</b> 917665155938<br>
             <b>Email:</b> mayaracafe@gmail.com<br>
             <b>Timings:</b> 10:00 AM – 10:00 PM
           </p>
 
           <div class="heroActions" style="margin-top:14px;">
             <a class="btn btnPrimary" href="https://wa.me/917665155938?text=Hi%20Mayara%20Cafe!%20I%20want%20to%20order%20%F0%9F%8D%BD%EF%B8%8F" target="_blank" rel="noopener">📲 WhatsApp</a>
-            <a class="btn" href="tel:+917665155938">📞 Call</a>
+            <a class="btn" href="tel:917665155938">📞 Call</a>
             <a class="btn" href="mailto:mayaracafe@gmail.com">✉️ Email</a>
           </div>
 
@@ -750,5 +708,6 @@
   </script>
 </body>
 </html>
+
 
 
